@@ -55,7 +55,7 @@ build_script:
 - python -c "import ctypes, os; print(ctypes.CDLL(os.environ['GEOS_LIBRARY_PATH']))"
 
 - cmd: >-
-    python setup.py build
+    python %APPVEYOR_BUILD_FOLDER%\setup.py build
 artifacts:
 - path: build\exe.win32-3.6\
   name: carto_acoustique_interieure_win32
