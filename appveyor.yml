@@ -25,7 +25,7 @@ build_script:
 
 - ps: 'Write-Host "Checking GEOS build $env:GEOS_INSTALL" -ForegroundColor Magenta'
 - if not exist C:\projects\deps mkdir C:\projects\deps
-- call %APPVEYOR_BUILD_FOLDER%\ci\appveyor\build_geos.cmd
+- call %APPVEYOR_BUILD_FOLDER%build_geos.cmd
 
 - ps: 'Write-Host "Checking geos_c.dll" -ForegroundColor Magenta'
 - python -c "import sys; print('Python ' + sys.version)"
