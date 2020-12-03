@@ -8,8 +8,8 @@ if exist %GEOS_INSTALL% (
   cd C:\projects
 
   curl -fsSO http://download.osgeo.org/geos/geos-%GEOS_VERSION%.tar.bz2
-  C:\Program Files\7-Zip\7z.exe x geos-%GEOS_VERSION%.tar.bz2
-  C:\Program Files\7-Zip\7z.exe x geos-%GEOS_VERSION%.tar
+  "C:\Program Files\7-Zip\7z.exe" x geos-%GEOS_VERSION%.tar.bz2
+  "C:\Program Files\7-Zip\7z.exe" x geos-%GEOS_VERSION%.tar
   cd geos-%GEOS_VERSION% || exit /B 5
 
   pip install ninja
