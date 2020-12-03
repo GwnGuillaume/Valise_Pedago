@@ -9,13 +9,10 @@ install:
     pip install shapely
     pip install tkinter
     pip install plotly
-    choco install -y nsis.portable -version 3.02.0.20160720
 cache: '%LOCALAPPDATA%\pip\Cache'
 build_script:
 - cmd: >-
     python setup.py build
-    python win32install\generate_nsis.py
-    makensis win32install\lpstools.nsi
 artifacts:
 - path: build\exe.win32-3.6\
   name: carto_acoustique_interieure_win32
