@@ -70,7 +70,7 @@ build_script:
 - python -c "from shapely import speedups; assert speedups.enabled"
 
 - cmd: >-
-  python %APPVEYOR_BUILD_FOLDER%\setup.py build
+    python %APPVEYOR_BUILD_FOLDER%\setup.py build
 
 artifacts:
 - path: build\exe.win32-3.6\
