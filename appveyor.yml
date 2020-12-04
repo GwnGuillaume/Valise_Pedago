@@ -68,9 +68,6 @@ build_script:
 - cmd: >-
     python %APPVEYOR_BUILD_FOLDER%\setup.py build
 
-cache:
-  - C:\projects\deps -> %APPVEYOR_BUILD_FOLDER%\build_geos.cmd
-
 artifacts:
 - path: build\exe.win32-3.6\
   name: carto_acoustique_interieure_win32
