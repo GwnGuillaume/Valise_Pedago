@@ -10,4 +10,3 @@ appJar
 shapely
 scipy
 plotly
-tkinter
