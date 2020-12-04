@@ -14,10 +14,13 @@ Ouvrir le terminal, aller dans le répertoire des scripts (`# cd ...`) et taper 
 python setup.py build
 ```
 
-
-
 ## Lancement de l'exécutable :
   
 * sous Windows, double-cliquer sur le fichier nomApp.exe
   
 * sous Linux : dans le terminal, taper la ligne de commande : `# ./nomApp`.
+
+## Interface
+
+![GitHub Logo](/images/noisemap_app_grid.png)
+Format: ![Alt Text](url)
