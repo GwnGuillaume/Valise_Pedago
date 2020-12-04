@@ -32,11 +32,14 @@ install:
     pip install cx_freeze
     pip install shapely
     pip install plotly
+
 cache: '%LOCALAPPDATA%\pip\Cache'
+
 build_script:
 - set GEOS_INSTALL=C:\projects\deps\geos-%GEOS_VERSION%-%COMPILER%-%ARCH%
 - set CYTHONPF=C:\\projects\\deps\\geos-%GEOS_VERSION%-%COMPILER%-%ARCH%
 - set GEOS_LIBRARY_PATH=%GEOS_INSTALL%\bin\geos_c.dll
+- set GEOS_COPY_PATH=C:\Lib\site-packages\shapely\DLLs\geos.dll
 
 - ps: 'Write-Host "Configuring MSVC compiler $env:COMPILER" -ForegroundColor Magenta'
 - call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" %ARCH%
@@ -65,7 +68,8 @@ build_script:
 - python -c "from shapely import speedups; assert speedups.enabled"
 
 - cmd: >-
-    python %APPVEYOR_BUILD_FOLDER%\setup.py build
+  cp %GEOS_LIBRARY_PATH% %GEOS_COPY_PATH%
+  python %APPVEYOR_BUILD_FOLDER%\setup.py build
 
 artifacts:
 - path: build\exe.win32-3.6\
