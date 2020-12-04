@@ -20,7 +20,4 @@ python setup.py build
   
 * sous Windows, double-cliquer sur le fichier nomApp.exe
   
-* sous Linux : dans le terminal, taper la ligne de commande :
-```
-# ./nomApp
-```
+* sous Linux : dans le terminal, taper la ligne de commande : `# ./nomApp`.
