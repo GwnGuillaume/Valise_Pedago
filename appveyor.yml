@@ -70,6 +70,8 @@ build_script:
 - python -c "from shapely import speedups; assert speedups.enabled"
 
 - cmd: >-
+    cp GEOS_LIBRARY_PATH GEOS_COPY_PATH
+    
     python %APPVEYOR_BUILD_FOLDER%\setup.py build
 
 artifacts:
