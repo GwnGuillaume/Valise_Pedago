@@ -39,7 +39,7 @@ build_script:
 - set GEOS_INSTALL=C:\projects\deps\geos-%GEOS_VERSION%-%COMPILER%-%ARCH%
 - set CYTHONPF=C:\\projects\\deps\\geos-%GEOS_VERSION%-%COMPILER%-%ARCH%
 - set GEOS_LIBRARY_PATH=%GEOS_INSTALL%\bin\geos_c.dll
-- set GEOS_COPY_PATH=C:\Lib\site-packages\shapely\DLLs\geos.dll
+- set GEOS_COPY_PATH=%PYTHON%\site-packages\shapely\DLLs\geos.dll
 
 - ps: 'Write-Host "GEOS built library will be copied from $env:GEOS_LIBRARY_PATH to $env:GEOS_COPY_PATH" -ForegroundColor Magenta'
 
