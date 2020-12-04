@@ -7,6 +7,6 @@ setuptools
 wheel
 cx_Freeze
 appJar
-shapely
+shapely==1.2b6
 scipy
 plotly
