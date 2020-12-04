@@ -54,8 +54,23 @@ build_script:
 - python -c "import sys; print('Python ' + sys.version)"
 - python -c "import ctypes, os; print(ctypes.CDLL(os.environ['GEOS_LIBRARY_PATH']))"
 
+- ps: 'Write-Host "Building extension" -ForegroundColor Magenta'
+- cd %APPVEYOR_BUILD_FOLDER%
+- pip install -r requirements-dev.txt
+- python setup.py build_ext --inplace -I%CYTHONPF%\\include -lgeos_c -L%CYTHONPF%\\lib
+
+- ps: 'Write-Host "Running pytest" -ForegroundColor Magenta'
+- pytest
+- python -c "import shapely; print(shapely.__version__)"
+- python -c "from shapely.geos import geos_version_string; print(geos_version_string)"
+- python -c "from shapely import speedups; assert speedups.enabled"
+  
+cache:
+  - C:\projects\deps -> %APPVEYOR_BUILD_FOLDER%\build_geos.cmd
+
 - cmd: >-
     python %APPVEYOR_BUILD_FOLDER%\setup.py build
+
 artifacts:
 - path: build\exe.win32-3.6\
   name: carto_acoustique_interieure_win32
