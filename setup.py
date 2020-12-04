@@ -7,7 +7,7 @@
 # version         : 1.0
 # usage           : python setup.py build
 # notes           :
-# python_version  : 2.7
+# python_version  : 3.8
 
 
 import sys
@@ -29,7 +29,7 @@ elif sys.platform == "linux2":
 if sys.platform == "win32":
     os.environ["TCL_LIBRARY"] = os.path.normpath(root.tk.exprstring('$tcl_library'))
     os.environ["TK_LIBRARY"] = os.path.normpath(root.tk.exprstring('$tk_library'))
-    PYTHON_INSTALL_DIR = os.path.dirname(sys.executable)
+    PYTHON_INSTALL_DIR = r"C:\Python36"
     # # PYTHON_INSTALL_DIR = os.path.dirname(os.path.dirname(os.__file__))
     # os.environ['TCL_LIBRARY'] = os.path.join(PYTHON_INSTALL_DIR, 'tcl', 'tcl8.6')
     # os.environ['TK_LIBRARY'] = os.path.join(PYTHON_INSTALL_DIR, 'tcl', 'tk8.6')
@@ -72,8 +72,8 @@ else:
 
 # Copier les fichiers non-Python et/ou repertoires et leur contenu:
 if sys.platform == "win32":
-    includefiles = [(os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'Lib', 'site-packages', 'shapely', 'DLLs', 'geos.dll'), os.path.join('lib', 'geos.dll')),
-                    (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'Lib', 'site-packages', 'shapely', 'DLLs', 'geos_c.dll'), os.path.join('lib', 'geos_c.dll')),
+    includefiles = [(os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'lib', 'site-packages', 'shapely', 'DLLs', 'geos.dll'), os.path.join('lib', 'geos.dll')),
+                    (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'lib', 'site-packages', 'shapely', 'DLLs', 'geos_c.dll'), os.path.join('lib', 'geos_c.dll')),
                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'DLLs', 'tk86t.dll'), os.path.join('lib', 'tk86t.dll')),
                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'DLLs', 'tcl86t.dll'), os.path.join('lib', 'tcl86t.dll')),
                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'DLLs', 'sqlite3.dll'), os.path.join('lib', 'sqlite3.dll')),
