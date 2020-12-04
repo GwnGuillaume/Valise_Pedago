@@ -22,5 +22,9 @@ python setup.py build
 
 ## Interface
 
-![GitHub Logo](/images/noisemap_app_grid.png)
-Format: ![Alt Text](url)
+![Grid generation](/images/noisemap_app_grid.png)
+
+<img src="/images/noisemap_app_measures.png" alt="Noise mapping"
+	title="Noise mapping" width="200" height="160" />
+
+![Noise mapping](/images/noisemap_app_measures.png)
