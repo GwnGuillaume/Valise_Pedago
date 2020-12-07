@@ -9,3 +9,8 @@ cx_Freeze
 appJar
 scipy
 plotly
+psutil
+string
+sys
+threading
+time
