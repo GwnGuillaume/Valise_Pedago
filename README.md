@@ -31,11 +31,8 @@ $ ./nomApp
 
 ## Interface
 
-<img src="/images/noisemap_app_grid.png" alt="Grid generation"
-	title="Noise mapping" width="400" height="320" />
-
-<img src="/images/noisemap_app_measures.png" alt="Noise mapping"
-	title="Noise mapping" width="400" height="320" />
+<img src="/images/noisemap_app_grid.png" alt="Grid generation" title="Noise mapping" width="400" height="320" />
+<img src="/images/noisemap_app_measures.png" alt="Noise mapping" title="Noise mapping" width="400" height="320" />
 
 # Remerciements
 PRSE Grand-Est
