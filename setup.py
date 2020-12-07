@@ -77,7 +77,7 @@ if sys.platform == "win32":
                     (os.path.join(PYTHON_INSTALL_DIR, 'DLLs', 'tcl86t.dll'), os.path.join('lib', 'tcl86t.dll')),
 #                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'DLLs', 'tk86t.dll'), os.path.join('lib', 'tk86t.dll')),
 #                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'DLLs', 'tcl86t.dll'), os.path.join('lib', 'tcl86t.dll')),
-                    (r'C:\WINDOWS\System32\sqlite3. dll', os.path.join('lib', 'sqlite3.dll')),
+                    (os.path.join(sys.path[0], 'SQLite3.dll'), os.path.join('lib', 'sqlite3.dll')),
 #                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'DLLs', 'sqlite3.dll'), os.path.join('lib', 'sqlite3.dll')),
                     # (os.path.join(PYTHON_INSTALL_DIR, 'Lib', 'site-packages'), 'lib'),
                     # (os.path.join(r'C:\Python27\Lib\site-packages\scipy'), 'lib\scipy'),
