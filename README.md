@@ -24,12 +24,12 @@ python setup.py build
   
 * sous Windows, double-cliquer sur le fichier *nomApp.exe*
   
-* sous Linux : dans le terminal, taper la ligne de commande : 
+* sous Linux : dans le terminal, taper la ligne de commande :
 ```
 $ ./nomApp
 ```
 
-## Interface
+## Interface
 
 <img src="/images/noisemap_app_grid.png" alt="Grid generation"
 	title="Noise mapping" width="400" height="320" />
