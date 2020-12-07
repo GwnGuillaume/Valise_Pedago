@@ -11,6 +11,5 @@ scipy
 plotly
 psutil
 chart_studio
-csv
 imgkit
 pathlib
