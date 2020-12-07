@@ -69,8 +69,10 @@ else:
 
 # Copier les fichiers non-Python et/ou repertoires et leur contenu:
 if sys.platform == "win32":
-    includefiles = [(os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'lib', 'site-packages', 'shapely', 'DLLs', 'geos.dll'), os.path.join('lib', 'geos.dll')),
-                    (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'lib', 'site-packages', 'shapely', 'DLLs', 'geos_c.dll'), os.path.join('lib', 'geos_c.dll')),
+    includefiles = [(r'C:\projects\deps\geos-3.6.4-msvc2019-x86\bin\geos.dll', os.path.join('lib', 'geos.dll')),
+                    (r'C:\projects\deps\geos-3.6.4-msvc2019-x86\bin\geos_c.dll', os.path.join('lib', 'geos_c.dll')),
+#                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'lib', 'site-packages', 'shapely', 'DLLs', 'geos.dll'), os.path.join('lib', 'geos.dll')),
+#                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'lib', 'site-packages', 'shapely', 'DLLs', 'geos_c.dll'), os.path.join('lib', 'geos_c.dll')),
                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'DLLs', 'tk86t.dll'), os.path.join('lib', 'tk86t.dll')),
                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'DLLs', 'tcl86t.dll'), os.path.join('lib', 'tcl86t.dll')),
                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'DLLs', 'sqlite3.dll'), os.path.join('lib', 'sqlite3.dll')),
