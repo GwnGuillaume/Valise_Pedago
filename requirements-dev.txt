@@ -10,3 +10,4 @@ appJar
 scipy
 plotly
 psutil
+chart_studio
