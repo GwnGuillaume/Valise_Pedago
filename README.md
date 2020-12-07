@@ -22,15 +22,21 @@ python setup.py build
 
 ## Lancement de l'exécutable :
   
-* sous Windows, double-cliquer sur le fichier nomApp.exe
+* sous Windows, double-cliquer sur le fichier *nomApp.exe*
   
-* sous Linux : dans le terminal, taper la ligne de commande : `$ ./nomApp`.
+* sous Linux : dans le terminal, taper la ligne de commande : 
+```
+$ ./nomApp
+```
 
 ## Interface
 
-![Grid generation](/images/noisemap_app_grid.png)
+<img src="/images/noisemap_app_grid.png" alt="Grid generation"
+	title="Noise mapping" width="400" height="320" />
 
 <img src="/images/noisemap_app_measures.png" alt="Noise mapping"
-	title="Noise mapping" width="200" height="160" />
+	title="Noise mapping" width="400" height="320" />
 
-![Noise mapping](/images/noisemap_app_measures.png)
+# Remerciements
+PRSE Grand-Est
+Gwendall Petit
