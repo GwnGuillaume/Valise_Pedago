@@ -80,7 +80,7 @@ build_script:
     rename "%GEOS_C_COPY_PATH%" "%GEOS_FILENAME"
 
 - cmd: >-
-    dir "%GEOS_C_COPY_DIR"
+    dir %GEOS_C_COPY_DIR *.dll
 
 - ps: 'Write-Host "Run build" -ForegroundColor Magenta'
     
