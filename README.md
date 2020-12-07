@@ -8,8 +8,14 @@ Cette valise pédagogique s'adresse aux enseignants en Collège ou Lycée en sup
 # Application pour la cartographie du bruit
 
 ## Compilation du script (Linux uniquement) :
-Télécharger 
-Ouvrir le terminal, aller dans le répertoire des scripts (`# cd ...`) et taper la ligne de commande :
+Télécharger le fichier zip *archive* : https://github.com/GwnGuillaume/Valise_Pedago/archive/master.zip
+
+Décomprésser l'archive *master.zip* :
+```
+unzip master.zip -d /chemin
+```
+
+Ouvrir le terminal, aller dans le répertoire des scripts (`$ cd /chemin`) et taper la ligne de commande :
 ```    
 python setup.py build
 ```
@@ -18,7 +24,7 @@ python setup.py build
   
 * sous Windows, double-cliquer sur le fichier nomApp.exe
   
-* sous Linux : dans le terminal, taper la ligne de commande : `# ./nomApp`.
+* sous Linux : dans le terminal, taper la ligne de commande : `$ ./nomApp`.
 
 ## Interface
 
