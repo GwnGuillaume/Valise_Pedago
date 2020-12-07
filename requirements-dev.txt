@@ -10,6 +10,3 @@ appJar
 scipy
 plotly
 psutil
-sys
-threading
-time
