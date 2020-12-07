@@ -74,10 +74,13 @@ build_script:
 - cmd: >-
     echo D|xcopy /S /Q /Y /F "%GEOS_C_LIBRARY_PATH%" "%GEOS_C_COPY_PATH%"
 
-- ps: 'Write-Host "GEOS built library will be copied from $env:GEOS_C_COPY_PATH to $env:GEOS_C_COPY_PATH" -ForegroundColor Magenta'
+- ps: 'Write-Host "GEOS built library will be renamed as $env:GEOS_FILENAME" -ForegroundColor Magenta'
 
 - cmd: >-
     rename "%GEOS_C_COPY_PATH%" "%GEOS_FILENAME"
+
+- cmd: >-
+    dir "%GEOS_C_COPY_DIR"
 
 - ps: 'Write-Host "Run build" -ForegroundColor Magenta'
     
