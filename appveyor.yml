@@ -71,7 +71,8 @@ build_script:
 - ps: 'Write-Host "GEOS built library will be copied from $env:GEOS_LIBRARY_PATH to $env:GEOS_COPY_PATH" -ForegroundColor Magenta'
 
 - cmd: >-
-    echo D|xcopy /S /Q /Y /F "%GEOS_LIBRARY_PATH%" "%GEOS_COPY_PATH%" 
+    echo D|xcopy /S /Q /Y /F "%GEOS_LIBRARY_PATH%" "%GEOS_COPY_PATH%"
+    rename  "%GEOS_COPY_PATH%geos_c.dll"  geos.dll
 
 - ps: 'Write-Host "Run build" -ForegroundColor Magenta'
     
