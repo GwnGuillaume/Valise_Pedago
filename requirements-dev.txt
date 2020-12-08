@@ -12,4 +12,3 @@ plotly
 psutil
 chart_studio
 imgkit
-pathlib
