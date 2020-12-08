@@ -32,6 +32,7 @@ install:
     pip install cx_freeze
     pip install shapely
     pip install plotly
+    pip install hypothesis
     pip install pandas
 
 cache: '%LOCALAPPDATA%\pip\Cache'
