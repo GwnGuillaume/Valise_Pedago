@@ -33,7 +33,7 @@ install:
     pip install shapely
     pip install plotly
     pip install --upgrade setuptools
-    pip uninstall -y pandas
+    pip uninstall pandas
     pip install pandas --verbose --no-cache-dir --no-binary=pandas --global-option="--inplace"
 
 cache: '%LOCALAPPDATA%\pip\Cache'
