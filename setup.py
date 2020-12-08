@@ -225,7 +225,7 @@ elif sys.platform == "linux2":
 
 # Cible de l'exécutable
 if sys.platform == 'win32':
-    script = r"C:\Users\gwenael.guillaume\PycharmProjects\Valise_pedago\carto.py"
+    script = os.path.join(sys.path[0], "carto.py")
 elif sys.platform == "linux2":
     script = "carto.py"
 cible = Executable(
