@@ -12,3 +12,4 @@ plotly
 psutil
 chart_studio
 imgkit
+pandas
