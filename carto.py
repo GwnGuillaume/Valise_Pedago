@@ -270,7 +270,7 @@ def press_menu(button):
         app.stop()
 
 ## FOR DEBUGING
-debug = True    # True for testing scripts with the Python editor
+debug = False    # True for testing scripts with the Python editor
 
 # Add Images
 dirpath = os.path.dirname(os.path.realpath('__file__'))
