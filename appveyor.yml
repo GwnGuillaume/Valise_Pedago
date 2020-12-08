@@ -28,12 +28,22 @@ init:
 install:
 - cmd: >-
     python -m pip install --upgrade pip
+    pip install descartes==1.0.1
+    pip install numpy>=1.4.1
+    pip install pytest
+    pip install pytest-cov
+    pip install wheel
+    pip install scipy
+    pip install psutil
+    pip install imgkit
+    pip install chart_studio
     pip install appJar
     pip install cx_freeze
     pip install shapely
     pip install plotly
     pip install hypothesis
     pip install pandas
+    cython==0.29.21
 
 cache: '%LOCALAPPDATA%\pip\Cache'
 
