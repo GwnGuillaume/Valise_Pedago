@@ -13,6 +13,10 @@
 import sys
 import os
 import encodings
+try:
+    from importlib import metadata
+except ImportError:
+    import importlib_metadata as metadata
 from cx_Freeze import setup, Executable
 if sys.platform == "win32":
     import tkinter
