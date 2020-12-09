@@ -41,6 +41,7 @@ install:
   "%PYTHON%\\python.exe -m pip install imgkit
   "%PYTHON%\\python.exe -m pip install chart_studio
   "%PYTHON%\\python.exe -m pip install appJar
+  "%PYTHON%\\python.exe -m pip install importlib-metadata>=3.1.1
   "%PYTHON%\\python.exe -m pip install cx_freeze
   "%PYTHON%\\python.exe -m pip install shapely
   "%PYTHON%\\python.exe -m pip install plotly
