@@ -29,8 +29,11 @@ init:
 
 - cmd: >-
   "%PYTHON%\\python.exe -m pip install wheel"
+  
   "%PYTHON%\\python.exe -m pip install --upgrade pip"
+  
   "%PYTHON%\\python.exe -m pip install install descartes==1.0.1"
+  
   "%PYTHON%\\python.exe -m pip install numpy>=1.4.1"
   "%PYTHON%\\python.exe -m pip install pytest"
   "%PYTHON%\\python.exe -m pip install pytest-cov"
