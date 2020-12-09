@@ -22,30 +22,30 @@ environment:
 #      ARCH: x64
 #      GEOS_VERSION: "3.8.1"
 
-init:
-- cmd: SET PATH=c:\python36;c:\python36\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files (x86)\7-Zip\;C:\Program Files\Git\usr\bin
+# init:
+# - cmd: SET PATH=c:\python36;c:\python36\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files (x86)\7-Zip\;C:\Program Files\Git\usr\bin
 
 - ps: 'Write-Host "Installation of required libraries" -ForegroundColor Magenta'
 
 install:
 - cmd: >-
-    python -m pip install --upgrade pip
-    pip install descartes==1.0.1
-    pip install numpy>=1.4.1
-    pip install pytest
-    pip install pytest-cov
-    pip install cython==0.29.21
-    pip install wheel
-    pip install scipy
-    pip install psutil
-    pip install imgkit
-    pip install chart_studio
-    pip install appJar
-    pip install cx_freeze
-    pip install shapely
-    pip install plotly
-    pip install hypothesis
-    pip install pandas
+  "%PYTHON%\\python.exe -m pip install wheel"
+  "%PYTHON%\\python.exe -m pip install --upgrade pip
+  "%PYTHON%\\python.exe -m pip install install descartes==1.0.1
+  "%PYTHON%\\python.exe -m pip install numpy>=1.4.1
+  "%PYTHON%\\python.exe -m pip install pytest
+  "%PYTHON%\\python.exe -m pip install pytest-cov
+  "%PYTHON%\\python.exe -m pip install cython==0.29.21
+  "%PYTHON%\\python.exe -m pip install scipy
+  "%PYTHON%\\python.exe -m pip install psutil
+  "%PYTHON%\\python.exe -m pip install imgkit
+  "%PYTHON%\\python.exe -m pip install chart_studio
+  "%PYTHON%\\python.exe -m pip install appJar
+  "%PYTHON%\\python.exe -m pip install cx_freeze
+  "%PYTHON%\\python.exe -m pip install shapely
+  "%PYTHON%\\python.exe -m pip install plotly
+  "%PYTHON%\\python.exe -m pip install hypothesis
+  "%PYTHON%\\python.exe -m pip install pandas
 
 cache: '%LOCALAPPDATA%\pip\Cache'
 
