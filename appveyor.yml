@@ -28,27 +28,24 @@ init:
 - ps: 'Write-Host "Installation of required libraries" -ForegroundColor Magenta'
 
 - cmd: >-
-  "%PYTHON%\\python.exe -m pip install wheel"
-  
-  "%PYTHON%\\python.exe -m pip install --upgrade pip"
-  
-  "%PYTHON%\\python.exe -m pip install install descartes==1.0.1"
-  
-  "%PYTHON%\\python.exe -m pip install numpy>=1.4.1"
-  "%PYTHON%\\python.exe -m pip install pytest"
-  "%PYTHON%\\python.exe -m pip install pytest-cov"
-  "%PYTHON%\\python.exe -m pip install cython==0.29.21"
-  "%PYTHON%\\python.exe -m pip install scipy"
-  "%PYTHON%\\python.exe -m pip install psutil"
-  "%PYTHON%\\python.exe -m pip install imgkit"
-  "%PYTHON%\\python.exe -m pip install chart_studio"
-  "%PYTHON%\\python.exe -m pip install appJar"
-  "%PYTHON%\\python.exe -m pip install importlib-metadata>=3.1.1"
-  "%PYTHON%\\python.exe -m pip install cx_freeze"
-  "%PYTHON%\\python.exe -m pip install shapely"
-  "%PYTHON%\\python.exe -m pip install plotly"
-  "%PYTHON%\\python.exe -m pip install hypothesis"
-  "%PYTHON%\\python.exe -m pip install pandas"
+  python -m pip install wheel  
+  python -m pip install --upgrade pip  
+  python -m pip install install descartes==1.0.1
+  python -m pip install numpy>=1.4.1
+  python -m pip install pytest
+  python -m pip install pytest-cov
+  python -m pip install cython==0.29.21
+  python -m pip install scipy
+  python -m pip install psutil
+  python -m pip install imgkit
+  python -m pip install chart_studio
+  python -m pip install appJar
+  python -m pip install importlib-metadata>=3.1.1
+  python -m pip install cx_freeze
+  python -m pip install shapely
+  python -m pip install plotly
+  python -m pip install hypothesis
+  python -m pip install pandas
 
 cache: '%LOCALAPPDATA%\pip\Cache'
 
