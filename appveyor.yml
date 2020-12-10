@@ -28,24 +28,24 @@ init:
 - ps: 'Write-Host "Installation of required libraries" -ForegroundColor Magenta'
 
 - cmd: >-
-    python pip install wheel  
-    python pip install --upgrade pip  
-    python pip install install descartes==1.0.1
-    python pip install numpy>=1.4.1
-    python pip install pytest
-    python pip install pytest-cov
-    python pip install cython==0.29.21
-    python pip install scipy
-    python pip install psutil
-    python pip install imgkit
-    python pip install chart_studio
-    python pip install appJar
-    python pip install importlib-metadata>=3.1.1
-    python pip install cx_freeze
-    python pip install shapely
-    python pip install plotly
-    python pip install hypothesis
-    python pip install pandas
+    pip install wheel  
+    pip install --upgrade pip  
+    pip install install descartes==1.0.1
+    pip install numpy>=1.4.1
+    pip install pytest
+    pip install pytest-cov
+    pip install cython==0.29.21
+    pip install scipy
+    pip install psutil
+    pip install imgkit
+    pip install chart_studio
+    pip install appJar
+    pip install importlib-metadata>=3.1.1
+    pip install cx_freeze
+    pip install shapely
+    pip install plotly
+    pip install hypothesis
+    pip install pandas
 
 cache: '%LOCALAPPDATA%\pip\Cache'
 
