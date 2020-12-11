@@ -27,7 +27,6 @@ init:
 
 - cmd: >-
     pip install --user --upgrade pip
-    # pip install wheel
     pip install install descartes==1.0.1
     pip install numpy>=1.4.1
     pip install pytest
