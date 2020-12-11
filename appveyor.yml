@@ -26,7 +26,9 @@ init:
 - cmd: SET PATH=c:\python36;c:\python36\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files (x86)\7-Zip\;C:\Program Files\Git\usr\bin;C:\Users\appveyor\AppData\Roaming\Python\Python36\Scripts
 
 - cmd: >-
-    pip install --user --upgrade pip
+#     pip install --user --upgrade pip
+    pip install --disable-pip-version-check --upgrade pip
+    pip install --upgrade wheel
     pip install install descartes==1.0.1
     pip install numpy>=1.4.1
     pip install pytest
@@ -99,4 +101,4 @@ build_script:
 artifacts:
 - path: build\exe.win32-3.6\
   name: carto_acoustique_interieure_win32
-- path: win32install\*.exe
+# - path: win32install\*.exe
