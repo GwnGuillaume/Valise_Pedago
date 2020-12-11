@@ -23,13 +23,10 @@ environment:
 #      GEOS_VERSION: "3.8.1"
 
 init:
+- cmd: SET PATH=c:\python36;c:\python36\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files (x86)\7-Zip\;C:\Program Files\Git\usr\bin;C:\Users\appveyor\AppData\Roaming\Python\Python36\Scripts
+
 - cmd: >-
-    SET PATH=C:\python36;C:\python36\Scripts
-    SET PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
-    SET PATH=C:\Program Files\Git\cmd;C:\Program Files (x86)\7-Zip\
-    SET PATH=C:\Program Files\Git\usr\bin;C:\Users\appveyor\AppData\Roaming\Python\Python36\Scripts
-- cmd: >-
-    pip install --user virtualenv
+#     pip install --user --upgrade pip
     pip install --disable-pip-version-check --upgrade pip
     pip install --upgrade wheel
     pip install install descartes==1.0.1
@@ -90,7 +87,6 @@ build_script:
 
 - cmd: >-
     echo D|xcopy /S /Q /Y /F "%GEOS_C_LIBRARY_PATH%" "%GEOS_C_COPY_PATH%"
-
 #- ps: 'Write-Host "GEOS built library in $env:GEOS_C_COPY_PATH will be renamed as $env:GEOS_FILENAME" -ForegroundColor Magenta'
 #
 #- cmd: >-
@@ -100,7 +96,6 @@ build_script:
     
 - cmd: >-
     python %APPVEYOR_BUILD_FOLDER%\setup.py build
-
 artifacts:
 - path: build\exe.win32-3.6\
   name: carto_acoustique_interieure_win32
