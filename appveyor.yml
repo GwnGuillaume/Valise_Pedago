@@ -9,8 +9,7 @@ environment:
 #    - PYTHON: "C:\\Python35-x64"
 #      ARCH: x64
 #      GEOS_VERSION: "3.5.2"
-#     - PYTHON: "C:\\Python36"
-    - PYTHON : "C:\\Users\\%username%\\AppData\\Local\\Programs\\Python\\Python36"
+    - PYTHON: "C:\\Python36"
       ARCH: x86
       GEOS_VERSION: "3.6.4"
 #    - PYTHON: "C:\\Python37-x64"
@@ -25,8 +24,12 @@ environment:
 
 init:
 - cmd: >-
-    %PYTHON%\\python.exe pip install --user virtualenv
+    SET PATH=C:\python36;C:\python36\Scripts
+    SET PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+    SET PATH=C:\Program Files\Git\cmd;C:\Program Files (x86)\7-Zip\
+    SET PATH=C:\Program Files\Git\usr\bin;C:\Users\appveyor\AppData\Roaming\Python\Python36\Scripts
 - cmd: >-
+    pip install --user virtualenv
     pip install --disable-pip-version-check --upgrade pip
     pip install --upgrade wheel
     pip install install descartes==1.0.1
