@@ -24,7 +24,9 @@ environment:
 
 init:
 - cmd: >-
-    pip install --user virtualenv
+    "%PYTHON%\python.exe pip install --user virtualenv"
+
+- cmd: >-
     pip install --disable-pip-version-check --upgrade pip
     pip install --upgrade wheel
     pip install install descartes==1.0.1
