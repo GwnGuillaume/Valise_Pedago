@@ -9,7 +9,8 @@ environment:
 #    - PYTHON: "C:\\Python35-x64"
 #      ARCH: x64
 #      GEOS_VERSION: "3.5.2"
-    - PYTHON: "C:\\Python36"
+#     - PYTHON: "C:\\Python36"
+    - PYTHON : "C:\\Users\\%username%\\AppData\\Local\\Programs\\Python\\Python36
       ARCH: x86
       GEOS_VERSION: "3.6.4"
 #    - PYTHON: "C:\\Python37-x64"
@@ -24,9 +25,7 @@ environment:
 
 init:
 - cmd: >-
-    "%PYTHON%\python.exe pip install --user virtualenv"
-
-- cmd: >-
+    pip install --user virtualenv
     pip install --disable-pip-version-check --upgrade pip
     pip install --upgrade wheel
     pip install install descartes==1.0.1
