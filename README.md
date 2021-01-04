@@ -8,32 +8,21 @@ Cette valise pédagogique s'adresse aux enseignants en Collège ou Lycée en sup
 
 # Application pour la cartographie du bruit
 
-## Compilation du script (Linux uniquement)
-
-Télécharger le fichier zip *archive* : https://github.com/GwnGuillaume/Valise_Pedago/archive/master.zip
-
-Décomprésser l'archive *master.zip* :
-```
-unzip master.zip -d /chemin
-```
-
-Ouvrir le terminal, aller dans le répertoire des scripts (`$ cd /chemin`) et taper la ligne de commande :
-```    
-python setup.py build
-```
-
-## Lancement de l'exécutable
+## Téléchargement et lancement de l'application
 
 ### Windows
 
-double-cliquer sur le fichier *nomApp.exe*
-  
+1. Télécharger l'archive https://ci.appveyor.com/project/GwnGuillaume/valise-pedago/artifacts/build/carto_acoustique_interieure_win32.zip.
+2. Décompresser l'archive *carto_acoustique_interieure_win32.zip* dans un dossier.
+3. Lancer l'application en double-cliquant sur l'exécutable *carto_acoustique_interieure.exe*.
+
 ### Linux
 
-ouvrir un terminal et taper la ligne de commande :
-```
-$ ./nomApp
-```
+1. Télécharger l'archive : https://github.com/GwnGuillaume/Valise_Pedago/archive/master.zip.
+2. Compiler le projet :
+ 1. Décomprésser l'archive *master.zip* dans un dossier avec la commande `$ unzip master.zip -d /chemin_vers_le_dossier`
+ 2. Aller dans le répertoire des scripts (`$ cd /chemin`) et taper la ligne de commande `$ python setup.py build`
+3. Lancer l'application avec la commande : `$ ./carto_acoustique_interieure`
 
 ## Interface
 
