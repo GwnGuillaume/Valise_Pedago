@@ -15,5 +15,5 @@ chart_studio
 imgkit
 hypothesis
 pandas
-cStringIO
+StringIO
 email
