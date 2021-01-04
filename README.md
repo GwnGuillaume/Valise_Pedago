@@ -20,8 +20,8 @@ Cette valise pédagogique s'adresse aux enseignants en Collège ou Lycée en sup
 
 1. Télécharger l'archive : https://github.com/GwnGuillaume/Valise_Pedago/archive/master.zip.
 2. Compiler le projet :
- 1. Décomprésser l'archive *master.zip* dans un dossier avec la commande `$ unzip master.zip -d /chemin_vers_le_dossier`
- 2. Aller dans le répertoire des scripts (`$ cd /chemin`) et taper la ligne de commande `$ python setup.py build`
+   1. Décompresser l'archive *master.zip* dans un dossier avec la commande `$ unzip master.zip -d /chemin_vers_le_dossier`
+   2. Aller dans le répertoire des scripts (`$ cd /chemin`) et taper la ligne de commande `$ python setup.py build`
 3. Lancer l'application avec la commande : `$ ./carto_acoustique_interieure`
 
 ## Interface
