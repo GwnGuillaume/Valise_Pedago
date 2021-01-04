@@ -54,7 +54,7 @@ if sys.platform == "win32":
 # Options d'inclusion/exclusion de modules
 if sys.platform == "win32":
     includes = ['tkinter', 'encodings']  # 'numpy.core._methods', 'numpy.lib.format'
-    packages = ['appJar', 'csv', 'cx_Freeze', 'encodings', 'imgkit', 'numpy', 'pathlib', 'chart_studio', 'psutil', 'scipy', 'pandas',
+    packages = ['appJar', 'csv', 'cx_Freeze', 'email', 'encodings', 'imgkit', 'numpy', 'pathlib', 'chart_studio', 'psutil', 'scipy', 'pandas',
                 'shapely', 'string', 'sys', 'threading', 'tkinter', 'time']
 elif sys.platform == "linux2":
     includes = ['numpy.core._methods']  # nommer les modules non trouves par cx_freeze
@@ -64,7 +64,7 @@ else:
     pass
 excludes = []
 if sys.platform == "win32":
-    excludes = ['email', 'matplotlib', 'mpl_toolkits', 'pip', 'PyPDF2', 'setuptools', 'sqlite3']
+    excludes = ['matplotlib', 'mpl_toolkits', 'pip', 'PyPDF2', 'setuptools', 'sqlite3']
 elif sys.platform == "linux2":
     excludes = ['Cython', 'email', 'future', 'matplotlib', 'mpl_toolkits', 'pip', 'PyPDF2', 'PyQt4',    # 'pandas'
                 'setuptools', 'sqlite3', 'xlsxwriter']
