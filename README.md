@@ -1,4 +1,5 @@
 # Valise pédagogique
+
 Cette valise pédagogique s'adresse aux enseignants en Collège ou Lycée en support à une démarche de sensibilisation des élèves à la problématique des nuisances sonores. Un kit de supports pédagogiques est mis à disposition qui comprend :
 * un ensemble de **documents ressources** introduisant les concepts physiques et perceptifs associés au bruit ;
 * une application pour la cartographie du bruit en espace clos tel qu'une salle de classe sur la base de mesures acoustiques réalisées à partir de l'application Android gratuite NoiseCapture (https://noise-planet.org/noisecapture.html).
@@ -7,7 +8,8 @@ Cette valise pédagogique s'adresse aux enseignants en Collège ou Lycée en sup
 
 # Application pour la cartographie du bruit
 
-## Compilation du script (Linux uniquement) :
+## Compilation du script (Linux uniquement)
+
 Télécharger le fichier zip *archive* : https://github.com/GwnGuillaume/Valise_Pedago/archive/master.zip
 
 Décomprésser l'archive *master.zip* :
@@ -20,11 +22,15 @@ Ouvrir le terminal, aller dans le répertoire des scripts (`$ cd /chemin`) et ta
 python setup.py build
 ```
 
-## Lancement de l'exécutable :
+## Lancement de l'exécutable
+
+### Windows
+
+double-cliquer sur le fichier *nomApp.exe*
   
-* sous Windows, double-cliquer sur le fichier *nomApp.exe*
-  
-* sous Linux : dans le terminal, taper la ligne de commande :
+### Linux
+
+ouvrir un terminal et taper la ligne de commande :
 ```
 $ ./nomApp
 ```
