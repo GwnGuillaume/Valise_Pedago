@@ -6,6 +6,8 @@ Cette valise pédagogique s'adresse aux enseignants en Collège ou Lycée en sup
 
 # Documents ressources
 
+Les supports sont disponibles au format pdf dans le dossier : *Documents ressources*.
+
 # Application pour la cartographie du bruit
 
 ## Téléchargement et lancement de l'application
@@ -26,7 +28,14 @@ Cette valise pédagogique s'adresse aux enseignants en Collège ou Lycée en sup
 
 ## Interface
 
+Au lancement de l'application, le menu principal s'affiche et propose 2 options :
+1. Générer le tableau et l'image de la grille de points de mesures ;
+2. Produire la cartographie sonore à partir des mesures.
+
+En cliquant sur *Générer le tableau et l'image de la grille de points de mesures*, l'interface prend l'apparence suivante.
 <img src="/images/noisemap_app_grid.png" alt="Grid generation" title="Noise mapping" width="400" height="320" />
+
+En cliquant sur *Produire la cartographie sonore à partir des mesures* dans le menu principal, l'interface prend à présent la forme suivante.
 <img src="/images/noisemap_app_measures.png" alt="Noise mapping" title="Noise mapping" width="400" height="320" />
 
 # Remerciements
