@@ -14,4 +14,4 @@ psutil
 chart_studio
 imgkit
 hypothesis
-pandas==0.24.2
+pandas
