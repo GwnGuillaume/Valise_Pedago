@@ -69,7 +69,7 @@ build_script:
 - python -c "import shapely; print(shapely.__version__)"
 - python -c "from shapely.geos import geos_version_string; print(geos_version_string)"
 - python -c "from shapely import speedups; assert speedups.enabled"
-- python -c "import pandas; pandas.test()"
+#- python -c "import pandas; pandas.test()"
 
 - ps: 'Write-Host "GEOS built library will be copied from $env:GEOS_C_LIBRARY_PATH to $env:GEOS_C_COPY_PATH" -ForegroundColor Magenta'
 
