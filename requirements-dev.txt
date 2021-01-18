@@ -6,6 +6,7 @@ pytest-cov
 setuptools
 wheel
 importlib-metadata>=3.1.1
+io.StringIO
 cx_Freeze
 appJar
 scipy
