@@ -28,8 +28,8 @@ init:
 
 install:
 - cmd: >-
-    pip uninstall -r requirements-dev.txt -y
     python -m pip install --upgrade pip
+    python -m pip uninstall plotly
     pip install appJar
     pip install cx_freeze
     pip install shapely
