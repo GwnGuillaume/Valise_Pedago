@@ -9,21 +9,21 @@ environment:
 #    - PYTHON: "C:\\Python35-x64"
 #      ARCH: x64
 #      GEOS_VERSION: "3.5.2"
-    - PYTHON: "C:\\Python36"
-      ARCH: x86
-      GEOS_VERSION: "3.6.4"
+#    - PYTHON: "C:\\Python36"
+#      ARCH: x86
+#      GEOS_VERSION: "3.6.4"
 #    - PYTHON: "C:\\Python37-x64"
 #      ARCH: x64
 #      GEOS_VERSION: "3.7.3"
-#    - PYTHON: "C:\\Python38"
-#      ARCH: x86
-#      GEOS_VERSION: "3.8.1"
+    - PYTHON: "C:\\Python38"
+      ARCH: x86
+      GEOS_VERSION: "3.8.1"
 #    - PYTHON: "C:\\Python39-x64"
 #      ARCH: x64
 #      GEOS_VERSION: "3.8.1"
 
 init:
-- cmd: SET PATH=c:\python36;c:\python36\Scripts;C:\Program Files\Git\cmd;C:\Program Files (x86)\7-Zip\;C:\Program Files\Git\usr\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+- cmd: SET PATH=c:\python38;c:\python38\Scripts;C:\Program Files\Git\cmd;C:\Program Files (x86)\7-Zip\;C:\Program Files\Git\usr\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
 
 install:
 - cmd: >-
@@ -85,6 +85,6 @@ build_script:
 - cmd: >-
     python %APPVEYOR_BUILD_FOLDER%\setup.py build
 artifacts:
-- path: build\exe.win32-3.6\
+- path: build\exe.win32-3.8\
   name: carto_acoustique_interieure_win32
 - path: win32install\*.exe
