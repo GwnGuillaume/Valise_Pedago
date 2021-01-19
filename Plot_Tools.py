@@ -8,7 +8,7 @@ from scipy.spatial import ConvexHull
 from scipy.interpolate import griddata
 from shapely.geometry.polygon import Polygon
 from shapely.geometry import Point
-import plotly.graph_objects as go  # import plotly.graph_objs as go (commented command works with Linux)
+import plotly.graph_objs as go
 from plotly.offline import plot
 from math import ceil, floor
 # from plotly.io import write_image
