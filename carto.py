@@ -281,7 +281,10 @@ if debug:
     elif sys.platform == "linux2":
         images_path = os.path.join(os.getcwd(), "images")
 else:
-    images_path = "icones"
+    if sys.platform == "win32":
+        images_path = os.path.join(dirpath, "icones")
+    elif sys.platform == "linux2":
+        images_path = "icones"
 
 # Create the GUI Window
 app = gui(u"Cartographie des niveaux sonores", useTtk=True)
