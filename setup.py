@@ -54,7 +54,7 @@ if sys.platform == "win32":
 # Options d'inclusion/exclusion de modules
 if sys.platform == "win32":
     includes = ['tkinter', 'encodings']  # 'numpy.core._methods', 'numpy.lib.format'
-    packages = ['appJar', 'csv',  'cx_Freeze', 'encodings', 'imgkit', 'io', 'numpy', 'pathlib', 'chart_studio', 'psutil', 'scipy', 'pandas',
+    packages = ['appJar', 'chart_studio', 'csv',  'cx_Freeze', 'encodings', 'imgkit', 'io', 'numpy', 'pandas', 'pathlib', 'plotly', 'psutil', 'scipy',
                 'shapely', 'string', 'sys', 'threading', 'tkinter', 'time']
 elif sys.platform == "linux2":
     includes = ['numpy.core._methods']  # nommer les modules non trouves par cx_freeze
