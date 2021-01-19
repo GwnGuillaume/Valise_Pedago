@@ -28,7 +28,7 @@ init:
 
 install:
 - cmd: >-
-    python -m pip uninstall -r requirements-dev.txt
+    pip uninstall -r requirements-dev.txt -y
     python -m pip install --upgrade pip
     pip install appJar
     pip install cx_freeze
