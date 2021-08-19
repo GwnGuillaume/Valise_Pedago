@@ -221,7 +221,7 @@ if sys.platform == "win32":
 icone = None
 targetRootName = "carto_acoustique_interieure"
 if sys.platform == "win32":
-    icone = os.path.join(images_path, "icone.png")
+    icone = None    # os.path.join(images_path, "icone.png")
     targetName = targetRootName # + ".exe"
 elif sys.platform == "linux2":
     icone = "images/icone.png"
