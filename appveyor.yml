@@ -89,4 +89,5 @@ build_script:
 artifacts:
 - path: build\exe.win32-3.8\
   name: carto_acoustique_interieure_win32
-- path: win32install\*.exe
+- path: win32install\
+#- path: win32install\*.exe
