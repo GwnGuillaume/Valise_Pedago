@@ -6,6 +6,13 @@ environment:
   COMPILER: msvc2019
   matrix:
     # Interleave PYTHON, ARCH and GEOS_VERSION
+    - PYTHON: "C:\\Python38"
+      ARCH: x86
+      GEOS_VERSION: "3.6.4"
+#      GEOS_VERSION: "3.8.1"
+#    - PYTHON: "C:\\Python39-x64"
+#      ARCH: x64
+#      GEOS_VERSION: "3.8.1"
 #    - PYTHON: "C:\\Python35-x64"
 #      ARCH: x64
 #      GEOS_VERSION: "3.5.2"
@@ -15,13 +22,6 @@ environment:
 #    - PYTHON: "C:\\Python37-x64"
 #      ARCH: x64
 #      GEOS_VERSION: "3.7.3"
-    - PYTHON: "C:\\Python38"
-      ARCH: x86
-      GEOS_VERSION: "3.6.4"
-#      GEOS_VERSION: "3.8.1"
-#    - PYTHON: "C:\\Python39-x64"
-#      ARCH: x64
-#      GEOS_VERSION: "3.8.1"
 
 init:
 - cmd: SET PATH=c:\python38;c:\python38\Scripts;C:\Program Files\Git\cmd;C:\Program Files (x86)\7-Zip\;C:\Program Files\Git\usr\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
@@ -46,7 +46,7 @@ build_script:
 - set GEOS_C_COPY_PATH=%GEOS_C_COPY_DIR%\geos_c.dll
 - set GEOS_FILENAME=geos.dll
 
-- ps: 'Write-Host "Configuring MSVC compiler $env:COMPILER" -ForegroundColor Magenta'
+- ps: 'Write-Host "Configuring Microsoft Visual C++ (MSVC) compiler $env:COMPILER" -ForegroundColor Magenta'
 - call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" %ARCH%
 
 - ps: 'Write-Host "Configuring PATH with $env:PYTHON and $env:GEOS_INSTALL\bin" -ForegroundColor Magenta'
@@ -74,7 +74,6 @@ build_script:
 #- python -c "import pandas; pandas.test()"
 
 - ps: 'Write-Host "GEOS built library will be copied from $env:GEOS_C_LIBRARY_PATH to $env:GEOS_C_COPY_PATH" -ForegroundColor Magenta'
-
 - cmd: >-
     echo D|xcopy /S /Q /Y /F "%GEOS_C_LIBRARY_PATH%" "%GEOS_C_COPY_PATH%"
 #- ps: 'Write-Host "GEOS built library in $env:GEOS_C_COPY_PATH will be renamed as $env:GEOS_FILENAME" -ForegroundColor Magenta'
@@ -88,6 +87,5 @@ build_script:
     python %APPVEYOR_BUILD_FOLDER%\setup.py build
 artifacts:
 - path: build\exe.win32-3.8\
-  name: carto_acoustique_interieure_win32
-- path: win32install\
-#- path: win32install\*.exe
+  name: carto_acoustique_interieure_win32   # carto_acoustique_interieure_win32
+- path: win32install\*.exe
