@@ -1,17 +1,17 @@
 cython==0.29.21
 descartes==1.0.1
-numpy>=1.4.1
+# numpy>=1.4.1
 pytest
 pytest-cov
-setuptools
-wheel
-importlib-metadata>=3.1.1
-cx_Freeze
-appJar
+# setuptools
+# wheel
+# importlib-metadata>=3.1.1
+# cx_Freeze
+# appJar
 scipy
-plotly
+# plotly
 psutil
 chart_studio
 imgkit
-hypothesis
-pandas
+# hypothesis
+# pandas
