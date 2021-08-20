@@ -206,7 +206,7 @@ options = {"path": path,
 
 # Pour inclure sous Windows les dll system necessaires
 if sys.platform == "win32":
-    options["include_msvcr"] = True
+    options["include_msvcr"] = False
 
 """
     Préparation de la cible
