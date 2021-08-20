@@ -9,6 +9,7 @@ pytest-cov
 cx_Freeze
 appJar
 scipy
+pygeos
 shapely
 plotly
 psutil
