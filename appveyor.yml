@@ -58,9 +58,9 @@ build_script:
 #- if not exist C:\projects\deps mkdir C:\projects\deps
 #- call %APPVEYOR_BUILD_FOLDER%\build_geos.cmd
 
-- ps: 'Write-Host "Checking geos_c.dll" -ForegroundColor Magenta'
-- python -c "import sys; print('Python ' + sys.version)"
-- python -c "import ctypes, os; print(ctypes.CDLL(os.environ['GEOS_C_LIBRARY_PATH']))"
+#- ps: 'Write-Host "Checking geos_c.dll" -ForegroundColor Magenta'
+#- python -c "import sys; print('Python ' + sys.version)"
+#- python -c "import ctypes, os; print(ctypes.CDLL(os.environ['GEOS_C_LIBRARY_PATH']))"
 
 - ps: 'Write-Host "Building extension" -ForegroundColor Magenta'
 - cd %APPVEYOR_BUILD_FOLDER%
