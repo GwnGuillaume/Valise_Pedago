@@ -73,10 +73,11 @@ else:
 
 # Copier les fichiers non-Python et/ou repertoires et leur contenu:
 if sys.platform == "win32":
-    includefiles = [(r'C:\projects\deps\geos-3.6.4-msvc2019-x86\bin\geos.dll', os.path.join('lib', 'geos.dll')),
-                    (r'C:\projects\deps\geos-3.6.4-msvc2019-x86\bin\geos_c.dll', os.path.join('lib', 'geos_c.dll')),
-#                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'lib', 'site-packages', 'shapely', 'DLLs', 'geos.dll'), os.path.join('lib', 'geos.dll')),
-#                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'lib', 'site-packages', 'shapely', 'DLLs', 'geos_c.dll'), os.path.join('lib', 'geos_c.dll')),
+    includefiles = [
+#                     (r'C:\projects\deps\geos-3.6.4-msvc2019-x86\bin\geos.dll', os.path.join('lib', 'geos.dll')),
+#                     (r'C:\projects\deps\geos-3.6.4-msvc2019-x86\bin\geos_c.dll', os.path.join('lib', 'geos_c.dll')),
+##                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'lib', 'site-packages', 'shapely', 'DLLs', 'geos.dll'), os.path.join('lib', 'geos.dll')),
+##                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'lib', 'site-packages', 'shapely', 'DLLs', 'geos_c.dll'), os.path.join('lib', 'geos_c.dll')),
                     (os.path.join(PYTHON_INSTALL_DIR, 'DLLs', 'tk86t.dll'), os.path.join('lib', 'tk86t.dll')),
                     (os.path.join(PYTHON_INSTALL_DIR, 'DLLs', 'tcl86t.dll'), os.path.join('lib', 'tcl86t.dll')),
 #                     (os.path.join(os.path.dirname(PYTHON_INSTALL_DIR), 'DLLs', 'tk86t.dll'), os.path.join('lib', 'tk86t.dll')),
@@ -221,7 +222,7 @@ if sys.platform == "win32":
 icone = None
 targetRootName = "carto_acoustique_win32"   # "carto_acoustique_interieure"
 if sys.platform == "win32":
-    icone = None    # os.path.join(images_path, "icone.png")
+    icone = os.path.join(images_path, "icone.png")
     targetName = targetRootName + ".exe"
 elif sys.platform == "linux2":
     icone = "images/icone.png"
@@ -232,18 +233,15 @@ if sys.platform == 'win32':
     script = os.path.join(sys.path[0], "carto.py")
 elif sys.platform == "linux2":
     script = "carto.py"
-cible = Executable(
-    script=script,
-    base=base,
-    icon=icone,
-    targetName=targetName
-)
+cible = Executable(script=script,
+                   base=base,   #icon=icone,
+                   targetName=targetName)
 
 #############################################################################
 # creation du setup
 setup(
       name=u"Cartographie_aoustique_en_espace_clos",
-      description=u"Cartographie aoustique en espace clos sur la base de mesures ponctuelles géoréférencée",
+      description=u"Cartographie aoustique en espace clos sur la base de mesures ponctuelles géoréférencées",
       author=u"Gwenaël GUILLAUME",
       version="1.0",
       options={"build_exe": options},
