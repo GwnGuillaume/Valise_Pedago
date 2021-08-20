@@ -29,12 +29,12 @@ init:
 install:
 - cmd: >-
     python -m pip install --upgrade pip
-    pip install appJar
-    pip install cx_freeze
-    pip install shapely
-    pip install plotly
-    pip install hypothesis
-    pip install pandas
+#    pip install appJar
+#    pip install cx_freeze
+#    pip install shapely
+#    pip install plotly
+#    pip install hypothesis
+#    pip install pandas
     
 cache: '%LOCALAPPDATA%\pip\Cache'
 
@@ -54,9 +54,9 @@ build_script:
 - python -m pip install --disable-pip-version-check --upgrade pip
 - pip install --upgrade wheel
 
-- ps: 'Write-Host "Checking GEOS build $env:GEOS_INSTALL" -ForegroundColor Magenta'
-- if not exist C:\projects\deps mkdir C:\projects\deps
-- call %APPVEYOR_BUILD_FOLDER%\build_geos.cmd
+#- ps: 'Write-Host "Checking GEOS build $env:GEOS_INSTALL" -ForegroundColor Magenta'
+#- if not exist C:\projects\deps mkdir C:\projects\deps
+#- call %APPVEYOR_BUILD_FOLDER%\build_geos.cmd
 
 - ps: 'Write-Host "Checking geos_c.dll" -ForegroundColor Magenta'
 - python -c "import sys; print('Python ' + sys.version)"
@@ -86,5 +86,5 @@ build_script:
     python %APPVEYOR_BUILD_FOLDER%\setup.py build
 
 artifacts:
-- path: build\exe.win32-3.8\
+- path: build\exe.win32-3.8\*.exe
   name: carto_acoustique_interieure
