@@ -1,43 +1,55 @@
 # Valise pédagogique
 
-Cette valise pédagogique s'adresse aux enseignants en Collège ou Lycée en support à une démarche de sensibilisation des élèves à la problématique des nuisances sonores. Un kit de supports pédagogiques est mis à disposition qui comprend :
-* un ensemble de **documents ressources** introduisant les concepts physiques et perceptifs associés au bruit ;
-* une application pour la cartographie du bruit en espace clos tel qu'une salle de classe sur la base de mesures acoustiques réalisées à partir de l'application Android gratuite NoiseCapture (https://noise-planet.org/noisecapture.html).
+Cette valise pédagogique s'adresse aux enseignants en Collège ou Lycée en support à une démarche de sensibilisation des élèves à la problématique des nuisances sonores. 
 
-# Documents ressources
+La valise pédagogique se présente sous la forme d'un kit composé :
 
-Les supports sont disponibles au format pdf dans le dossier : *Documents ressources*.
+* d'une **application** pour la cartographie du bruit en espace clos, tel qu'une salle de classe ou un atelier, sur la base de mesures acoustiques réalisées à partir de l'application Android gratuite NoiseCapture (https://noise-planet.org/noisecapture.html);
+* d'un ensemble de **documents ressources** introduisant les concepts physiques et perceptifs associés au bruit.
+
+
 
 # Application pour la cartographie du bruit
 
-## Téléchargement et lancement de l'application
+L'application "Cartographie des niveaux sonores" permet de réaliser des cartes de bruit en milieu fermé. 
 
-### Windows
+Fonctionnant dans un environnement Windows ou bien Linux, elle est fournie gratuitement, selon les termes de la licence GPL v3 ([voir](./LICENCE)).
 
-1. Télécharger l'archive https://ci.appveyor.com/project/GwnGuillaume/valise-pedago/artifacts/build/carto_acoustique_interieure_win32.zip.
-2. Décompresser l'archive *carto_acoustique_interieure_win32.zip* dans un dossier.
-3. Lancer l'application en double-cliquant sur l'exécutable *carto_acoustique_interieure.exe*.
+<img src="/home/gpetit/Documents/Codes/Valise_Pedago/images/noisemap_app_measures.png" alt="noisemap_app_measures" style="zoom:50%;" />
 
-### Linux
+## Documentation utilisateur
 
-1. Télécharger l'archive : https://github.com/GwnGuillaume/Valise_Pedago/archive/master.zip.
-2. Compiler le projet :
-   1. Décompresser l'archive *master.zip* dans un dossier avec la commande `$ unzip master.zip -d /chemin_vers_le_dossier`
-   2. Aller dans le répertoire des scripts (`$ cd /chemin`) et taper la ligne de commande `$ python setup.py build`
-3. Lancer l'application avec la commande : `$ ./carto_acoustique_interieure`
+Pour télécharger et prendre en main cette application, nous vous invitons à consulter la documentation présente dans le dossier `docs` (ou bien en cliquant [ICI](./docs/Execution_logiciel.md)).
 
-## Interface
 
-Au lancement de l'application, le menu principal s'affiche et propose 2 options :
-1. Générer le tableau et l'image de la grille de points de mesures ;
-2. Produire la cartographie sonore à partir des mesures.
 
-En cliquant sur *Générer le tableau et l'image de la grille de points de mesures*, l'interface prend l'apparence suivante.
-<img src="/images/noisemap_app_grid.png" alt="Grid generation" title="Noise mapping" width="400" height="320" />
+# Documents ressources
 
-En cliquant sur *Produire la cartographie sonore à partir des mesures* dans le menu principal, l'interface prend à présent la forme suivante.
-<img src="/images/noisemap_app_measures.png" alt="Noise mapping" title="Noise mapping" width="400" height="320" />
+ Dans le dossier `ressources/presentation` se trouvent les deux documents suivants :
+
+- `/intro_acoustique/Presentation_generale.pdf` : un cours d'[introduction à l'acoustique](./ressources/presentation/intro_acoustique/Presentation_generale.pdf)
+- `/atelier_carto_noisecapture/Mesure_avec_NoiseCapture.pdf` : la [présentation de la méthodologie](./ressources/presentation/atelier_carto_noisecapture/Mesure_avec_NoiseCapture.pdf) proposée pour mesurer l'environnement sonore, à l'aide de l'application NoiseCapture
+
+Ces supports sont fournis au format .pdf et selon les termes de la licence ouverte Creative Commons - [CC-BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
+
+
+
+# Auteurs
+
+
+
+Le logiciel "Cartographie des niveaux sonores" a été développé par Gwenaël Guillaume, Chargé de Recherche en Acoustique au Cerema et au sein de l'Unité Mixte de Recherche en Acoustique Environnementale ([UMRAE](www.umrae.fr)).
+Pour toute question relative à cette application, veuillez le contacter à l'adresse suivante : gwenael.guillaume [at] cerema.fr
+
+
+
+Une partie de la documentation a été réalisée par Gwendall Petit, Ingénieur d'Etude en Sciences de l'Information Géographique au sein du laboratoire [Lab-STICC](https://labsticc.fr/) (CNRS UMR 6285).
+
+
+
+Les auteurs sont tout deux membres du projet [Noise-Planet](https://noise-planet.org/).
+
+
 
 # Remerciements
-PRSE Grand-Est
-Gwendall Petit
+PRSE Grand-Est (http://www.grand-est.prse.fr/)
