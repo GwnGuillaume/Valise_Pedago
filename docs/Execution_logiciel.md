@@ -73,7 +73,7 @@ cd /mon_dossier/
 
 L'application est constituée d'une page simple ou seulement 5 informations (dont 2 facultatives) sont demandées à l'utilisateur.
 
-<img src="/home/gpetit/Nextcloud/Plateformes/Noise_Planet/Noise_Planet/Kit_pedagogique/Activite_Carte_Atelier/Tutoriel_execution_programme/Images/application.png" style="zoom:80%;" />
+<img src="./Images/application.png" style="zoom:80%;" />
 
 
 
@@ -91,7 +91,7 @@ Une fois les 5 informations renseignées, cliquez sur le bouton `Démarrer`. Une
 
 Une fois les traitements terminés, une nouvelle fenêtre s'ouvre et vous demande si vous souhaitez ouvrir les résultats.
 
-![](/home/gpetit/Nextcloud/Plateformes/Noise_Planet/Noise_Planet/Kit_pedagogique/Activite_Carte_Atelier/Tutoriel_execution_programme/Images/process_finish_panel.png)
+![](./Images/process_finish_panel.png)
 
 
 
@@ -115,7 +115,7 @@ Pour chacuns de ces fichiers, il vous est possible de réaliser les actions **in
 
   
 
-  <img src="/home/gpetit/Nextcloud/Plateformes/Noise_Planet/Noise_Planet/Kit_pedagogique/Activite_Carte_Atelier/Tutoriel_execution_programme/Images/plotly_toolbar.png" style="zoom:65%;" />
+  <img src="./Images/plotly_toolbar.png" style="zoom:65%;" />
 
 
 
