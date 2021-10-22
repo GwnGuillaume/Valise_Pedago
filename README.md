@@ -15,7 +15,7 @@ L'application "Cartographie des niveaux sonores" permet de réaliser des cartes 
 
 Fonctionnant dans un environnement Windows ou bien Linux, elle est fournie gratuitement, selon les termes de la licence GPL v3 ([voir](./LICENCE)).
 
-<img src="/home/gpetit/Documents/Codes/Valise_Pedago/images/noisemap_app_measures.png" alt="noisemap_app_measures" style="zoom:50%;" />
+<img src="./images/noisemap_app_measures.png" alt="noisemap_app_measures" style="zoom:50%;" />
 
 ## Documentation utilisateur
 
