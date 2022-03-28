@@ -220,7 +220,6 @@ def ScatterNoiseData(data, geom, image_path, mach_geoms):
             trace_data.append(trace3[i])
     fig = go.Figure(data=trace_data, layout=layout)
     plot(fig, filename=image_path+".html", auto_open=False)
-    # write_image(fig, image_path+'png', format='png', scale=None, width=1024, height=800)
     return fig
 
 # Interpolation plot
@@ -263,7 +262,6 @@ def InterpolateData(data, geom, image_path, mach_geoms):
             trace_data.append(trace3[i])
     fig = go.Figure(data=trace_data, layout=layout)
     plot(fig, filename=image_path+".html", auto_open=False)
-    # write_image(fig, image_path+'png', format='png', scale=None, width=1024, height=800)
     return fig
 
 
@@ -307,5 +305,4 @@ def ContourData(data, geom, image_path, mach_geoms):
             trace_data.append(trace3[i])
     fig = go.Figure(data=trace_data, layout=layout)
     plot(fig, filename=image_path+".html", auto_open=False)
-    # write_image(fig, image_path+'png', format='png', scale=None, width=1024, height=800)
     return fig
