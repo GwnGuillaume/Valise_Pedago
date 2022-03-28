@@ -8,6 +8,7 @@ from appJar import gui
 from pathlib import Path
 from App_Processes import ReadMeasCsvFile, ReadStudyZoneGeomFile, ReadObstaclesGeomsFile, SortData, gen_points_labels_grid, write_points_labels_grid_to_csv
 from Plot_Tools import SetGeom, ScatterNoiseData, InterpolateData, ContourData, PlotPointsGridWithDataLabels
+import webbrowser
 
 
 def validate_input_geom_file(geom_file):
@@ -149,7 +150,7 @@ def run_generate_grid_points():
     app.setMeter("progress_generation", 100)
     if app.yesNoBox("Process_ended", u"Le tableau et l'image de la grille de mesure sont générés. Ouvrir l'image ?",
                     parent=None) == True:
-        fig_grid_points_labels.show()
+        webbrowser.open(gridlabels_file_path + ".html", new=2)
     if app.yesNoBox("Process_ended", u"Quitter l'application ?", parent=None) == True:
         app.stop()
     return
@@ -235,9 +236,9 @@ def run_measurement_treatment():
     app.setMeter("progress_treatment", 100)
     if app.yesNoBox("Process_ended", u"Le traitement des mesures est terminé. Ouvrir les fichiers résultats ?",
                     parent=None) == True:
-        fig_scatter.show()
-        fig_interp.show()
-        fig_contour.show()
+        webbrowser.open(points_file_path+".html", new=2)
+        webbrowser.open(interpol_file_path+".html", new=2)
+        webbrowser.open(contours_file_path+".html", new=2)
     if app.yesNoBox("Process_ended", u"Quitter l'application ?", parent=None) == True:
         app.stop()
     return
@@ -278,13 +279,13 @@ dirpath = os.path.dirname(os.path.realpath('__file__'))
 if debug:
     if sys.platform == "win32":
         images_path = os.path.join(dirpath, "images")
-    elif sys.platform == "linux2":
+    elif sys.platform == 'linux' or sys.platform == 'linux2':
         images_path = os.path.join(os.getcwd(), "images")
 else:
     if sys.platform == "win32":
         images_path = os.path.join(dirpath, "icones")
-    elif sys.platform == "linux2":
-        images_path = "icones"
+    elif sys.platform == 'linux' or sys.platform == 'linux2':
+        images_path = os.path.join(os.getcwd(), "icones")
 
 # Create the GUI Window
 app = gui(u"Cartographie des niveaux sonores", useTtk=True)
@@ -294,7 +295,7 @@ if sys.platform == "win32":
 elif sys.platform == "linux2":
     app.setSize(800, 600)
 app.setBg(colour='LightYellow')
-app.addImage("menu_princ_header_img", os.path.join(images_path, "bandeau.png"), row=0, column=0, colspan=3)
+app.addImage("menu_princ_header_img", os.path.join(images_path, "bandeau.gif"), row=0, column=0, colspan=3)
 app.set_Resizable(canResize=True)
 app.startFrameStack("FRAME STACK", start=0)
 
@@ -302,36 +303,36 @@ app.startFrameStack("FRAME STACK", start=0)
 # FRAME 0 : MENU PRINCIPAL
 app.startFrame(u"Menu principal")
 # app.addLabel(" ", row=0, column=0)
-app.addImageButton("Preparation", press_menu, imgFile=os.path.join(images_path, "menu_princ_generate_img.png"),
+app.addImageButton("Preparation", press_menu, imgFile=os.path.join(images_path, "menu_princ_generate_img.gif"),
                    row=0, column=0, colspan=1, align=None)
 app.addLabel(u"\tGénérer le tableau et l'image de la grille de points de mesures", row=0, column=2)
-app.addImage("menu_princ_generate_img_output", os.path.join(images_path, "menu_princ_generate_run_img.png"), row=0, column=3)
-app.addImageButton("Traitement", press_menu, imgFile=os.path.join(images_path, "menu_princ_treat_img.png"),
+app.addImage("menu_princ_generate_img_output", os.path.join(images_path, "menu_princ_generate_run_img.gif"), row=0, column=3)
+app.addImageButton("Traitement", press_menu, imgFile=os.path.join(images_path, "menu_princ_treat_img.gif"),
                    row=1, column=0, colspan=1, align=None)
 app.addLabel(u"\tProduire la cartographie sonore à partir des mesures", row=1, column=2)
-app.addImage("menu_princ_treat_img_output", os.path.join(images_path, "menu_princ_treat_run_img.png"), row=1, column=3)
+app.addImage("menu_princ_treat_img_output", os.path.join(images_path, "menu_princ_treat_run_img.gif"), row=1, column=3)
 app.stopFrame()
 
 ##
 # FRAME 1 : GÉNÉRATION  DE LA GRILLE DE POINTS DE MESURE
 app.startFrame(u"Preparation")
-app.addImage("texte_preparation", os.path.join(images_path, "texte_preparation.png"), row=0, column=0, colspan=3)
-app.addImage("menu_generate_study_zone_img", os.path.join(images_path, "study_zone_geom_file.png"), row=1, column=0)
+app.addImage("texte_preparation", os.path.join(images_path, "texte_preparation.gif"), row=0, column=0, colspan=3)
+app.addImage("menu_generate_study_zone_img", os.path.join(images_path, "study_zone_geom_file.gif"), row=1, column=0)
 app.addFileEntry("menu_generate_study_zone_file_btn", row=1, column=1, colspan=2).theButton.config(text=u"Géométrie de la zone d'étude")
 # app.setEntryDefault("menu_generate_study_zone_file_btn", os.path.join()
-app.addImage("menu_generate_dist_pts_img", os.path.join(images_path, "distance_pts_mesure.png"), row=2, column=0)
+app.addImage("menu_generate_dist_pts_img", os.path.join(images_path, "distance_pts_mesure.gif"), row=2, column=0)
 app.setEntryDefault("menu_generate_study_zone_file_btn", u"Sélection du fichier de la géométrie de la zone d'étude")
 app.addLabelEntry("Distance entre les points de mesure", row=2, column=1)
 app.setEntryDefault("Distance entre les points de mesure", u"1.0")
 app.addLabel(u"m", row=2, column=2)
-app.addImage("menu_generate_outrep_img", os.path.join(images_path, "repository.png"), row=3, column=0)
+app.addImage("menu_generate_outrep_img", os.path.join(images_path, "repository.gif"), row=3, column=0)
 app.addDirectoryEntry("menu_generate_outrep_btn", row=3, column=1, colspan=2).theButton.config(text=u"Dossier de résultats")
 app.setEntryDefault("menu_generate_outrep_btn", u"Dossier de résultats")
 app.addEntry("menu_generate_outfile_btn", row=4, column=1)
 app.setEntryDefault("menu_generate_outfile_btn", u"Préfixe des fichiers csv et html de résultats (...-grille_points_de_mesure.csv)")
 #
-app.addImage("texte_generate_run_img", os.path.join(images_path, "texte_generate_run_img.png"), row=0, column=4, colspan=3)
-app.addImageButton(u"Générer", press, imgFile=os.path.join(images_path, "menu_generate_run_img.png"),
+app.addImage("texte_generate_run_img", os.path.join(images_path, "texte_generate_run_img.gif"), row=0, column=4, colspan=3)
+app.addImageButton(u"Générer", press, imgFile=os.path.join(images_path, "menu_generate_run_img.gif"),
                    row=2, column=4, rowspan=2, colspan=2, align=None)
 app.addMeter("progress_generation", row=5, column=4, colspan=2)
 app.stopFrame()
@@ -339,25 +340,25 @@ app.stopFrame()
 ##
 # FRAME 2 : TRAITEMENT DES MESURES
 app.startFrame(u"Traitement")
-app.addImage("texte_treatment_input", os.path.join(images_path, "texte_treatment_input.png"), row=0, column=0, colspan=3)
-app.addImage("menu_treatment_meas_file_img", os.path.join(images_path, "insert_file.png"), row=1, column=0)
+app.addImage("texte_treatment_input", os.path.join(images_path, "texte_treatment_input.gif"), row=0, column=0, colspan=3)
+app.addImage("menu_treatment_meas_file_img", os.path.join(images_path, "insert_file.gif"), row=1, column=0)
 app.addFileEntry("menu_treatment_meas_file_btn", row=1, column=1, colspan=2).theButton.config(text=u"Mesures")
 app.setEntryDefault("menu_treatment_meas_file_btn", u"Fichier de mesures")
-app.addImage("menu_treatment_geom_file_img", os.path.join(images_path, "study_zone_geom_file.png"), row=2, column=0)
+app.addImage("menu_treatment_geom_file_img", os.path.join(images_path, "study_zone_geom_file.gif"), row=2, column=0)
 app.addFileEntry("menu_treatment_geom_file_btn", row=2, column=1, colspan=2).theButton.config(text=u"Géométrie de la zone d'étude")
 app.setEntryDefault("menu_treatment_geom_file_btn", u"--- OPTIONNEL --- Fichier de la géométrie de la zone d'étude")
-app.addImage("menu_treatment_obst_file_img", os.path.join(images_path, "obstacles_geoms_file.png"), row=3, column=0)
+app.addImage("menu_treatment_obst_file_img", os.path.join(images_path, "obstacles_geoms_file.gif"), row=3, column=0)
 app.addFileEntry("menu_treatment_obst_file_btn", row=3, column=1, colspan=2).theButton.config(text=u"Géométries des obstacles")
 app.setEntryDefault("menu_treatment_obst_file_btn", u"--- OPTIONNEL --- Fichier des géométries des obstacles")
-app.addImage("menu_treatment_outrep_img", os.path.join(images_path, "repository.png"), row=4, column=0)
+app.addImage("menu_treatment_outrep_img", os.path.join(images_path, "repository.gif"), row=4, column=0)
 app.addDirectoryEntry("menu_treatment_outrep_btn", row=4, column=1, colspan=2).theButton.config(text=u"Dossier de résultats")
 app.setEntryDefault("menu_treatment_outrep_btn", u"Dossier de résultats")
-app.addImage("menu_treatment_outfile_img", os.path.join(images_path, "treatement_outfile_img.png"), row=5, column=0)
+app.addImage("menu_treatment_outfile_img", os.path.join(images_path, "treatement_outfile_img.gif"), row=5, column=0)
 app.addEntry("menu_treatment_outfile_btn", row=5, column=1)
 app.setEntryDefault("menu_treatment_outfile_btn", u"Préfixe des fichiers html de résultats (...-1_points_mesures.html/-2_interpolation.html/-3_isocontours.html)")
 #
-app.addImage("texte_treat_run_img", os.path.join(images_path, "texte_treat_run_img.png"), row=0, column=4, colspan=3)
-app.addImageButton(u"Traiter", press, imgFile=os.path.join(images_path, "menu_treat_run_img.png"),
+app.addImage("texte_treat_run_img", os.path.join(images_path, "texte_treat_run_img.gif"), row=0, column=4, colspan=3)
+app.addImageButton(u"Traiter", press, imgFile=os.path.join(images_path, "menu_treat_run_img.gif"),
                    row=2, column=4, rowspan=2, colspan=2, align=None)
 app.addMeter("progress_treatment", row=5, column=4, colspan=2)
 app.stopFrame()
