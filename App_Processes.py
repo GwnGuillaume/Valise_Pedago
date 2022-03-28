@@ -7,10 +7,7 @@ from csv import reader as csvreader, writer
 from shapely.geometry.polygon import Polygon
 from threading import Thread
 from time import sleep
-if sys.platform == 'win32':
-    from tkinter import Toplevel, Label
-elif sys.platform == 'linux2':
-    from Tkinter import Toplevel, Label
+from tkinter import Toplevel, Label
 import string
 from shapely.geometry import Point
 from Plot_Tools import get_geom_bounds
@@ -165,10 +162,7 @@ def gen_points_labels_grid(geom, xgrid_step=1., ygrid_step=1.):
     ny, nx = len(xaxis_range), len(yaxis_range)
 
     # Alphabet
-    if sys.platform == 'win32':
-        alphabet = list(string.ascii_uppercase)
-    elif sys.platform == 'linux2':
-        alphabet = list(string.uppercase)
+    alphabet = list(string.ascii_uppercase)
     nbAlphabet = int(ceil(nx / len(alphabet)))
     alphaList = alphabet
     alphaList.extend([alphaList[i] + letter for letter in alphaList for i in range(nbAlphabet)])
