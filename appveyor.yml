@@ -1,6 +1,6 @@
 version: 1.0.{build}
 image: Visual Studio 2019
-platform: x64
+platform: x86
 
 environment:
   COMPILER: msvc2019
@@ -9,8 +9,8 @@ environment:
 #    - PYTHON: "C:\\Python38"
 #      ARCH: x86
 #      GEOS_VERSION: "3.6.4"
-    - PYTHON: "C:\\Python39-x64"
-      ARCH: x64
+    - PYTHON: "C:\\Python39"
+      ARCH: x32
       GEOS_VERSION: "3.9.1"
 #    - PYTHON: "C:\\Python35-x64"
 #      ARCH: x64
@@ -79,5 +79,5 @@ build_script:
     python %APPVEYOR_BUILD_FOLDER%\setup.py build
 
 artifacts:
-- path: build\exe.win-amd64-3.9\*.exe
+- path: build\exe.win32-3.9\*.exe
   name: carto_acoustique_interieure
