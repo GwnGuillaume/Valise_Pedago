@@ -1,17 +1,17 @@
 version: 1.0.{build}
 image: Visual Studio 2019
-platform: x64
+platform: x86
 
 environment:
   COMPILER: msvc2019
   matrix:
     # Interleave PYTHON, ARCH and GEOS_VERSION
-#    - PYTHON: "C:\\Python38"
-#      ARCH: x86
-#      GEOS_VERSION: "3.6.4"
-    - PYTHON: "C:\\Python39"
+    - PYTHON: "C:\\Python38"
       ARCH: x86
       GEOS_VERSION: "3.6.4"
+#    - PYTHON: "C:\\Python39"
+#      ARCH: x86
+#      GEOS_VERSION: "3.6.4"
 #    - PYTHON: "C:\\Python35-x64"
 #      ARCH: x64
 #      GEOS_VERSION: "3.5.2"
@@ -28,12 +28,6 @@ init:
 install:
 - cmd: >-
     python -m pip install --upgrade pip
-#    pip install appJar
-#    pip install cx_freeze
-#    pip install shapely
-#    pip install plotly
-#    pip install hypothesis
-#    pip install pandas
     
 cache: '%LOCALAPPDATA%\pip\Cache'
 
@@ -85,5 +79,5 @@ build_script:
     python %APPVEYOR_BUILD_FOLDER%\setup.py build
 
 artifacts:
-- path: build\exe.win32-3.9\*.exe
+- path: build\exe.win32-3.8\*.exe
   name: carto_acoustique_interieure
