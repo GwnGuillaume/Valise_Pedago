@@ -1,17 +1,17 @@
 version: 1.0.{build}
 image: Visual Studio 2019
-platform: x86
+platform: x64
 
 environment:
   COMPILER: msvc2019
   matrix:
     # Interleave PYTHON, ARCH and GEOS_VERSION
-    - PYTHON: "C:\\Python38"
-      ARCH: x86
-      GEOS_VERSION: "3.6.4"
-#    - PYTHON: "C:\\Python39"
+#    - PYTHON: "C:\\Python38"
 #      ARCH: x86
 #      GEOS_VERSION: "3.6.4"
+    - PYTHON: "C:\\Python39-x64"
+      ARCH: x64
+      GEOS_VERSION: "3.9.1"
 #    - PYTHON: "C:\\Python35-x64"
 #      ARCH: x64
 #      GEOS_VERSION: "3.5.2"
@@ -23,7 +23,7 @@ environment:
 #      GEOS_VERSION: "3.7.3"
 
 init:
-- cmd: SET PATH=c:\python38;c:\python38\Scripts;C:\Program Files\Git\cmd;C:\Program Files (x86)\7-Zip\;C:\Program Files\Git\usr\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+- cmd: SET PATH=c:\python39;c:\python39\Scripts;C:\Program Files\Git\cmd;C:\Program Files (x86)\7-Zip\;C:\Program Files\Git\usr\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
 
 install:
 - cmd: >-
@@ -79,5 +79,5 @@ build_script:
     python %APPVEYOR_BUILD_FOLDER%\setup.py build
 
 artifacts:
-- path: build\exe.win32-3.8\*.exe
+- path: build\exe.win64-3.9\*.exe
   name: carto_acoustique_interieure
