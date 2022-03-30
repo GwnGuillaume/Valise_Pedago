@@ -79,5 +79,5 @@ build_script:
     python %APPVEYOR_BUILD_FOLDER%\setup.py build
 
 artifacts:
-- path: build\exe.win64-3.9\*.exe
+- path: build\exe.win-amd64-3.9\*.exe
   name: carto_acoustique_interieure
