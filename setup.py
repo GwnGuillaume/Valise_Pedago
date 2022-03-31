@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # title           : setup.py
-# description     : This script enables to build executables for Windows and Linux operating systems.
+# description     : This script enables to build executables for Windows operating systems.
 # author          : Gwenaël GUILLAUME
 # date            : 07/11/2019
 # version         : 1.0
 # usage           : python setup.py build
 # notes           :
-# python_version  : 3.8
+# python_version  : 3.9
 
 
 import sys
@@ -33,8 +33,8 @@ elif sys.platform == 'linux' or sys.platform == 'linux2':
 if sys.platform == "win32":
     os.environ["TCL_LIBRARY"] = os.path.normpath(root.tk.exprstring('$tcl_library'))
     os.environ["TK_LIBRARY"] = os.path.normpath(root.tk.exprstring('$tk_library'))
-    PYTHON_INSTALL_DIR = r"C:\Python38"
-    # # PYTHON_INSTALL_DIR = os.path.dirname(os.path.dirname(os.__file__))
+    # PYTHON_INSTALL_DIR = r"C:\Python38"
+    # PYTHON_INSTALL_DIR = os.path.dirname(os.path.dirname(os.__file__))
     # os.environ['TCL_LIBRARY'] = os.path.join(PYTHON_INSTALL_DIR, 'tcl', 'tcl8.6')
     # os.environ['TK_LIBRARY'] = os.path.join(PYTHON_INSTALL_DIR, 'tcl', 'tk8.6')
 elif sys.platform == 'linux' or sys.platform == 'linux2':
@@ -214,8 +214,8 @@ if sys.platform == "win32":
 # Application graphique ou console
 base = None
 if sys.platform == "win32":
-    # base = "Win32GUI"  # pour application graphique sous Windows
-    base = "Console" # pour application en console sous Windows
+    base = "Win32GUI"  # pour application graphique sous Windows
+    # base = "Console" # pour application en console sous Windows
 
 # Icone de l'application
 icone = None
