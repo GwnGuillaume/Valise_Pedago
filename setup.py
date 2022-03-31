@@ -33,10 +33,8 @@ elif sys.platform == 'linux' or sys.platform == 'linux2':
 if sys.platform == "win32":
     os.environ["TCL_LIBRARY"] = os.path.normpath(root.tk.exprstring('$tcl_library'))
     os.environ["TK_LIBRARY"] = os.path.normpath(root.tk.exprstring('$tk_library'))
-    # PYTHON_INSTALL_DIR = r"C:\Python38"
+    PYTHON_INSTALL_DIR = r"C:\Users\gwenael.guillaume\PycharmProjects\Valise_pedago\venv"  # r"C:\Python38"
     # PYTHON_INSTALL_DIR = os.path.dirname(os.path.dirname(os.__file__))
-    # os.environ['TCL_LIBRARY'] = os.path.join(PYTHON_INSTALL_DIR, 'tcl', 'tcl8.6')
-    # os.environ['TK_LIBRARY'] = os.path.join(PYTHON_INSTALL_DIR, 'tcl', 'tk8.6')
 elif sys.platform == 'linux' or sys.platform == 'linux2':
     os.environ['TCL_LIBRARY'] = root.tk.exprstring('$tcl_library')
     os.environ['TK_LIBRARY'] = root.tk.exprstring('$tk_library')
