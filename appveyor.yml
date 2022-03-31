@@ -10,7 +10,7 @@ environment:
 #      ARCH: x86
 #      GEOS_VERSION: "3.6.4"
     - PYTHON: "C:\\Python39"
-      ARCH: x32
+      ARCH: x86
       GEOS_VERSION: "3.9.1"
 #    - PYTHON: "C:\\Python35-x64"
 #      ARCH: x64
