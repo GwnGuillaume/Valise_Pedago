@@ -291,7 +291,7 @@ else:
 app = gui(u"Cartographie des niveaux sonores", useTtk=True)
 app.setTtkTheme("classic")
 if sys.platform == "win32":
-    app.setSize(1200, 800)
+    app.setSize(1000, 800)
 elif sys.platform == "linux2":
     app.setSize(800, 600)
 app.setBg(colour='LightYellow')
